@@ -3,10 +3,6 @@ var resource = require('resource'),
   forms = resource.use('forms');
 
 module['exports'] = function(options, callback) {
-
-  console.log(options.data);
-
-
   var $ = this.$;
   forms.generate({
       resource: 'thing',

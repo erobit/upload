@@ -3,10 +3,15 @@ var resource = require('resource'),
   forms = resource.use('forms');
 
 module['exports'] = function(options, callback) {
+
+  console.log(options.data);
+
+
   var $ = this.$;
   forms.generate({
       resource: 'thing',
-      method: 'create'
+      method: 'create',
+      data: options.data
     }, 
     function(err, result) {
       if (err) { throw err; }

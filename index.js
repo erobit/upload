@@ -3,7 +3,7 @@ var resource = require('resource'),
 	upload = resource.define('upload');
 
 // define how uploads will be persisted
-thing.persist('memory');
+thing.persist('fs');
 
 // define schema - use thing schema for consistency / exporting
 upload.schema = thing.schema;

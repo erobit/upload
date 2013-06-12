@@ -4,6 +4,7 @@ var resource = require('resource'),
 
 module['exports'] = function(options, callback) {
   var $ = this.$;
+
   forms.generate({
       resource: 'thing',
       method: 'create',

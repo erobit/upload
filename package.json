@@ -24,9 +24,9 @@
     "url": "https://github.com/erobit/upload/issues"
   },
   "dependencies" :{
-    "big": "~0.4.0",
-    "resource": "~0.4.0",
-    "resources": "~0.4.0",
-    "connect": "~2.7.11"
+    "big": "0.4.X",
+    "resource": "0.4.X",
+    "resources": "0.4.X",
+    "connect": "2.7.X"
   }
 }

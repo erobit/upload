@@ -11,6 +11,11 @@ upload.schema = thing.schema;
 resource.use('html');
 resource.use('http');
 resource.use('view');
+resource.use('admin');
+
+creature = resource.use('creature');
+
+creature.persist('fs');
 
 upload.method('init', init, {
   "description": "augment web server with views for upload resource",
@@ -66,6 +71,11 @@ function listen(options, callback) {
 		});
 	});
 }
-listen();
+//listen();
+
+resource.admin.start(function (err, server) {
+  var address = server.address();
+  resource.logger.info('http://' + address.address + ":" + address.port + '/admin');
+});
 
 exports.upload = upload;
